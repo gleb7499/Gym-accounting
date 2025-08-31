@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Продукт" id="29">
+			<DataPath>Объект.Продукт</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПродуктКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ПродуктРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<Table name="Ингредиенты" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Ингредиенты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИнгредиентыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ИнгредиентыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ИнгредиентыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ИнгредиентыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>Ингредиенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнгредиентыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ИнгредиентыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИнгредиентыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Ингредиенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнгредиентыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ИнгредиентыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИнгредиентыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Ингредиенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнгредиентыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ИнгредиентыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИнгредиентыНомерСтроки" id="20">
+					<DataPath>Объект.Ингредиенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнгредиентыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ИнгредиентыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ИнгредиентыПродукт" id="23">
+					<DataPath>Объект.Ингредиенты.Продукт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнгредиентыПродуктКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ИнгредиентыПродуктРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ИнгредиентыКоличество" id="26">
+					<DataPath>Объект.Ингредиенты.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнгредиентыКоличествоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ИнгредиентыКоличествоРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Рецепты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
